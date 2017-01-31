@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
+import { IProduct } from './product';
+
 @Component({
   selector: 'app-product-list',
   templateUrl: './product-list.component.html',
@@ -10,7 +12,7 @@ export class ProductListComponent implements OnInit {
   panelTitle: string = "Product List";
   showImage: boolean = false;
   filterList: string = "cart";
-  products: any[] = [
+  products: IProduct[] = [
     {
       "productId": 2,
       "productName": "Garden Cart",
