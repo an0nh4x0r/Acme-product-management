@@ -13,14 +13,14 @@
       </div>
 
       <div class="col-md-4">
-        <input type="text" id="filter">
+        <input type="text" id="filter" [(ngModel)]="filterList">
       </div>
 
     </div>
 
     <div class="row">
       <div class="col-md-6">
-        <h3>Filtered By: </h3>
+        <h3>Filtered By: {{filterList}}</h3>
       </div>
     </div>
   </div>
