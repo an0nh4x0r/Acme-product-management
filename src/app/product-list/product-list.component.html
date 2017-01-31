@@ -32,8 +32,9 @@
       <thead>
       <tr>
         <th>
-          <button class="btn btn-primary">
-            Show Image
+          <button class="btn btn-primary"
+                  (click)="toggleImage()">
+            {{ showImage ? 'Hide' : 'Show' }} Image
           </button>
         </th>
         <th>Product</th>
@@ -46,18 +47,21 @@
 
       <tbody>
 
-        <tr *ngFor="let product of products">
+      <tr *ngFor="let product of products">
 
-          <td>
-            <img class="images" [src]="product.imageUrl" [title]="product.productName">
-          </td>
-          <td>{{product.productName}}</td>
-          <td>{{product.productCode}}</td>
-          <td>{{product.releaseDate}}</td>
-          <td>{{product.price}}</td>
-          <td>{{product.starRating}}</td>
+        <td>
+          <img class="images"
+               [src]="product.imageUrl"
+               [title]="product.productName"
+               *ngIf="showImage">
+        </td>
+        <td>{{product.productName}}</td>
+        <td>{{product.productCode}}</td>
+        <td>{{product.releaseDate}}</td>
+        <td>{{product.price}}</td>
+        <td>{{product.starRating}}</td>
 
-        </tr>
+      </tr>
 
       </tbody>
 

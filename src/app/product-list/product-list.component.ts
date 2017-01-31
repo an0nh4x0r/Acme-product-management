@@ -8,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class ProductListComponent implements OnInit {
 
   panelTitle: string = "Product List";
+  showImage: boolean = false;
   products: any[] = [
     {
       "productId": 2,
@@ -34,6 +35,10 @@ export class ProductListComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+  }
+
+  toggleImage(): void {
+    this.showImage = !this.showImage;
   }
 
 }
