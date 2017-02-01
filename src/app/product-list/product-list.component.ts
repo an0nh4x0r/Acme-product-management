@@ -11,7 +11,7 @@ export class ProductListComponent implements OnInit {
 
   panelTitle: string = "Product List";
   showImage: boolean = false;
-  filterList: string = "cart";
+  filterList: string = "";
   products: IProduct[] = [
     {
       "productId": 2,
